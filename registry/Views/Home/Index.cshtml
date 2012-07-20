@@ -1,0 +1,73 @@
+﻿
+<!DOCTYPE html >
+<html lang="en">
+<head>
+
+<script src="@Url.Content("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.signalR-0.5.2.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/signalr/hubs")" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="@Url.Content("~/bootstrap/css/bootstrap.min.css")">
+<style>
+  .input-submedium {
+    width: 135px;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+  <div class="span2">
+    <h2>Local</h2>
+    <label for="Id">Id</label>
+    <input type="text" id="Id" disabled="disabled" class="input-submedium">
+    <label for="Version">Version</label>
+    <input type="text" id="Version" disabled="disabled" class="input-submedium">
+    <label for="FirstName">FirstName</label>
+    <input type="text" id="FirstName" class="input-submedium">
+    <label for="LastName">LastName</label>
+    <input type="text" id="LastName" class="input-submedium">
+    <label for="IsEnrolled">IsEnrolled</label>
+    <input type="checkbox" id="IsEnrolled" checked="checked">
+    <label for="GPA">GPA</label>
+    <input type="text" id="GPA" class="input-submedium">
+    <a id="Save" class="btn btn-primary"><i class="icon-ok icon-white"></i> Save</a>
+  </div>
+
+  <div class="span3">
+    <h2>Server</h2>
+    <label for="svrId">Id</label>
+    <input type="text" id="svrId" disabled="disabled" class="input-submedium">
+    <label for="svrVersion">Version</label>
+    <input type="text" id="svrVersion" disabled="disabled" class="input-submedium">
+    <label for="svrFirstName">FirstName</label>
+    <input type="text" id="svrFirstName" disabled="disabled" class="input-submedium">
+    <label for="svrLastName">LastName</label>
+    <input type="text" id="svrLastName" disabled="disabled" class="input-submedium">
+    <label for="svrIsEnrolled">IsEnrolled</label>
+    <input type="checkbox" id="svrIsEnrolled" disabled="disabled" checked="checked" class="input-submedium">
+    <label for="svrGPA">GPA</label>
+    <input type="text" id="svrGPA" disabled="disabled" class="input-submedium">
+  </div>
+</div> @* row *@
+</div> @* container *@
+
+<script>
+  var serviceUrl = /* Use WCF? */ false
+    ? '@Url.Content("~/RegistryService.svc/")' // WCF
+    : '@Url.Content("~/Home/")';  // controller
+</script>
+
+<script src="@Url.Content("~/js/Home.js")" type="text/javascript"></script>
+
+@*
+<script src="@Url.Content("~/js/HomeRpc.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/js/HomeView.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/js/HomeInit.js")" type="text/javascript"></script>
+*@
+
+</body>
+</html>
+
