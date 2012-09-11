@@ -1,8 +1,12 @@
-#Registry
+Registry
+========
 
-##SignalR demo for concurrent updates
+- *Author*: Antonio Rodriguez, dev@xhroot.com
+- *Description*: SignalR demo for concurrent updates
+- *License*: BSD
+- *Blog post*: http://www.xhroot.com/blog/2012/07/12/live-updates-using-signalr/
 
-Installation notes:
+###Installation notes:
 
 - In `web.config`, adjust the database connection string to point to your local database.
 - The Models folder contains a file - `CreateStudentsTableDDL.sql` - that will create the Students table and populate it with 1 record.
